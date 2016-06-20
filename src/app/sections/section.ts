@@ -1,6 +1,6 @@
 export class Section {
   id: string;
-  title: string;
+  label: string;
   menuIcon: string;
   active: boolean;
 }

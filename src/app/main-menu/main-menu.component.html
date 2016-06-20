@@ -1,5 +1,10 @@
-<ul class="nav-group">
-  <li *ngFor="let section of sections">
-    <a [myHighlight]='color'><i class="fa {{section.menuIcon}}"></i>{{section.title}}</a>
-  </li>
-</ul>
+<div class="menu-button-container">
+  <i class="fa fa-bars"></i>
+</div>
+<nav>
+  <ul class="nav-group">
+    <li *ngFor="let section of sections">
+      <a><i class="fa {{section.menuIcon}}"></i>{{section.label}}</a>
+    </li>
+  </ul>
+</nav>

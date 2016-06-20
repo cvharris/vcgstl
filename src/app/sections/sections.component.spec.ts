@@ -9,25 +9,25 @@ import {
 import { ComponentFixture, TestComponentBuilder } from '@angular/compiler/testing';
 import { Component } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { SectionComponent } from './section.component';
+import { SectionsComponent } from './sections.component';
 
 describe('Component: Section', () => {
   let builder: TestComponentBuilder;
 
-  beforeEachProviders(() => [SectionComponent]);
+  beforeEachProviders(() => [SectionsComponent]);
   beforeEach(inject([TestComponentBuilder], function (tcb: TestComponentBuilder) {
     builder = tcb;
   }));
 
-  it('should inject the component', inject([SectionComponent],
-      (component: SectionComponent) => {
+  it('should inject the component', inject([SectionsComponent],
+      (component: SectionsComponent) => {
     expect(component).toBeTruthy();
   }));
 
   it('should create the component', inject([], () => {
-    return builder.createAsync(SectionComponentTestController)
+    return builder.createAsync(SectionsComponentTestController)
       .then((fixture: ComponentFixture<any>) => {
-        let query = fixture.debugElement.query(By.directive(SectionComponent));
+        let query = fixture.debugElement.query(By.directive(SectionsComponent));
         expect(query).toBeTruthy();
         expect(query.componentInstance).toBeTruthy();
       });
@@ -39,8 +39,8 @@ describe('Component: Section', () => {
   template: `
     <app-section></app-section>
   `,
-  directives: [SectionComponent]
+  directives: [SectionsComponent]
 })
-class SectionComponentTestController {
+class SectionsComponentTestController {
 }
 

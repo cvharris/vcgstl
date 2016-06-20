@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Section } from '../section/section';
+import { Section } from '../sections/section';
 
 @Pipe({
   name: 'activeSection',

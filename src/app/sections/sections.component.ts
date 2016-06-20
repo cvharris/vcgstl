@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { SectionsService } from '../sections.service';
-import { Section } from '../sections/section';
-import { ActiveSectionPipe } from './active-section.pipe';
+import { Section } from './section';
 
 @Component({
   moduleId: module.id,
-  selector: 'app-main-menu',
-  templateUrl: 'main-menu.component.html',
-  styleUrls: ['main-menu.component.css'],
+  selector: 'app-sections',
+  templateUrl: 'sections.component.html',
   providers: [SectionsService],
-  pipes: [ActiveSectionPipe]
+  styleUrls: ['sections.component.css']
 })
-export class MainMenuComponent implements OnInit {
+export class SectionsComponent implements OnInit {
   sections: Section[];
 
   constructor(private sectionsService: SectionsService) { }

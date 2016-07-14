@@ -1,5 +1,16 @@
-<app-title-bar class="title-bar"></app-title-bar>
-<main>
+<header class="title-bar">
+  <div class="logo-box left">
+    <div class="title">
+      <img id="logo" class="logo" src="/img/Vatterott_Icon.png" />
+      <span class="website-title name">Vatterott Consulting Group</span>
+    </div>
+  </div>
+  <div class="menu-button-container right" (click)="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </div>
+</header>
+<app-main-menu *ngIf="menuOpen" class="right"></app-main-menu>
+<main (onMenuToggled)="menuToggled($event)">
   <app-sections></app-sections>
   <app-footer></app-footer>
 </main>

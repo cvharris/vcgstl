@@ -6,6 +6,6 @@ import { SECTIONS } from './sections/sections-list';
 @Injectable()
 export class SectionsService {
   getSections() {
-    return Promise.resolve(SECTIONS);
+    return SECTIONS;
   }
 }

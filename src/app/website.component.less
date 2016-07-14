@@ -6,11 +6,65 @@
  -------------------------------------------------------------*/
 @import "reset";
 @import "vars";
+@import "mixins";
 @import "base";
 
 website-app {
   display: block;
   height: 100%;
+  position: relative;
+  perspective: 1500px;
+  perspective-origin: 0% 50%;
+  overflow: auto;
+  z-index: 1;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    display: block;
+    z-index: 9;
+    content: '';
+    opacity: 0;
+    transform: translate3d(300px, 0, 0);
+    transition-duration: 0.5s;
+    transition-property: opacity, width, transform;
+    transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  }
+
+  .media-query(@mobile, {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  });
+}
+
+.title-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  height: @title-bar-height;
+}
+
+.logo-box {
+  height: 100%;
+}
+
+.title {
+  height: 100%;
+}
+
+#logo {
+  max-height: 100%;
+}
+
+.menu-button-container {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
 }
 
 #content-main {

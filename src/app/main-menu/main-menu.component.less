@@ -2,6 +2,18 @@
   display: block;
 }
 
-ul.nav-group {
-  display: none;
+#slider-menu {
+  position: fixed;
+  right: 0;
+  top: 55px;
+  width: 300px;
+  height: calc(100vh - 55px);
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  visibility: hidden;
+  opacity: 1;
+  transform: translate3d(300px, 0, 0);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
 }

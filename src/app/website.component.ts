@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { TitleBarComponent } from './title-bar';
+import { MainMenuComponent } from './main-menu';
 import { SectionsComponent } from './sections';
 import { FooterComponent } from './footer';
 
@@ -9,8 +9,13 @@ import { FooterComponent } from './footer';
   templateUrl: 'website.component.html',
   styleUrls: ['website.component.css'],
   encapsulation: ViewEncapsulation.None,
-  directives: [TitleBarComponent, SectionsComponent, FooterComponent]
+  directives: [MainMenuComponent, SectionsComponent, FooterComponent]
 })
 export class WebsiteAppComponent {
   title = 'Website works!';
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }

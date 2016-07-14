@@ -14,14 +14,15 @@ import { ActiveSectionPipe } from './active-section.pipe';
 export class MainMenuComponent implements OnInit {
   sections: Section[];
 
-  constructor(private sectionsService: SectionsService) { }
+  constructor(private sectionsService: SectionsService) {
+    this.sections = this.getSections();
+  }
 
   getSections() {
-    this.sectionsService.getSections().then(sections => this.sections = sections);
+    return this.sectionsService.getSections();
   }
 
   ngOnInit() {
     this.getSections();
   }
-
 }

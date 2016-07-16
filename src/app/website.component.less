@@ -24,11 +24,12 @@ website-app {
     right: 0;
     width: 0;
     height: 100%;
+    background: fade(@black, 85);
     display: block;
     z-index: 9;
     content: '';
     opacity: 0;
-    transform: translate3d(300px, 0, 0);
+    transform: translate3d(-500px, 0, 0);
     transition-duration: 0.5s;
     transition-property: opacity, width, transform;
     transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
@@ -46,8 +47,14 @@ website-app {
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  position: relative;
-  height: @title-bar-height;
+  height: @header-height;
+  background: @background-swatch;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  overflow: hidden;
+  backface-visibility: hidden;
 }
 
 .logo-box {
@@ -56,6 +63,8 @@ website-app {
 
 .title {
   height: 100%;
+  padding: .25rem;
+  padding-right: 0;
 }
 
 #logo {
@@ -70,5 +79,32 @@ website-app {
 #content-main {
   position: relative;
   height: 100%;
-  margin-top: 110px;
+  margin-top: @header-height;
+  background-color: @background-swatch;
+  perspective: 1000px;
+  z-index: 8;
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+}
+
+website-app.menuOpen {
+  overflow: hidden;
+
+  header {
+    transform: translate3d(0, 0, 0);
+  }
+
+  #content-main {
+    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  &:after {
+    width: ~"calc(100% - 300px)";
+    opacity: 1;
+    transform: translate3d(-300px, 0, 0);
+    transition-duration: 0.5s;
+    transition-property: opacity, width, transform;
+    transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  }
 }

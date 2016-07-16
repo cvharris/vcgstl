@@ -19,7 +19,7 @@ export class MainMenuComponent implements OnInit {
   }
 
   getSections() {
-    return this.sectionsService.getSections();
+    return this.sectionsService.getSections({active: true});
   }
 
   ngOnInit() {

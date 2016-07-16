@@ -9,8 +9,8 @@
     <i class="fa fa-bars"></i>
   </div>
 </header>
-<app-main-menu *ngIf="menuOpen" class="right"></app-main-menu>
-<main (onMenuToggled)="menuToggled($event)">
+<app-main-menu [ngClass]="{open: menuOpen}" class="right"></app-main-menu>
+<main id="content-main">
   <app-sections></app-sections>
   <app-footer></app-footer>
 </main>

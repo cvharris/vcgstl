@@ -5,6 +5,9 @@ import { FooterComponent } from './footer';
 
 @Component({
   moduleId: module.id,
+  host: {
+    '[class.menuOpen]': 'menuOpen'
+  },
   selector: 'website-app',
   templateUrl: 'website.component.html',
   styleUrls: ['website.component.css'],

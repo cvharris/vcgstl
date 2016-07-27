@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 
-import { Section } from './sections/section';
-import { SECTIONS } from './sections/sections-list';
+import { Section } from './section';
+import { SECTIONS } from './sections-list';
 
 @Injectable()
 export class SectionsService {
   getSections(query) {
     if (query) {
       return SECTIONS.filter( section => {
-        for (var key in query) {
+        for (let key in query) {
           if (section[key] === query[key]) {
             return true;
           }

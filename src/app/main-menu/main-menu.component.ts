@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SectionsService } from '../sections.service';
-import { Section } from '../sections/section';
+import { Section } from '../section';
 import { ActiveSectionPipe } from './active-section.pipe';
 
 @Component({

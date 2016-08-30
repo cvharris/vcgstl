@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MainMenuComponent } from './main-menu';
-import { SectionsComponent } from './sections';
+import { TopSectionComponent } from './top-section';
+import { ContactSectionComponent } from './contact-section';
 import { FooterComponent } from './footer';
 
 @Component({
@@ -12,7 +13,7 @@ import { FooterComponent } from './footer';
   templateUrl: 'website.component.html',
   styleUrls: ['website.component.css'],
   encapsulation: ViewEncapsulation.None,
-  directives: [MainMenuComponent, SectionsComponent, FooterComponent]
+  directives: [MainMenuComponent, TopSectionComponent, ContactSectionComponent, FooterComponent]
 })
 export class WebsiteAppComponent {
   title = 'Website works!';

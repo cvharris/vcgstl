@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SectionsService } from '../sections.service';
-import { Section } from './section';
+import { Section } from '../section';
 
 @Component({
   moduleId: module.id,

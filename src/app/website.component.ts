@@ -1,6 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MainMenuComponent } from './main-menu';
 import { TopSectionComponent } from './top-section';
+import { ServicesSectionComponent } from './services-section';
+import { AboutSectionComponent } from './about-section';
 import { ContactSectionComponent } from './contact-section';
 import { FooterComponent } from './footer';
 
@@ -13,7 +15,7 @@ import { FooterComponent } from './footer';
   templateUrl: 'website.component.html',
   styleUrls: ['website.component.css'],
   encapsulation: ViewEncapsulation.None,
-  directives: [MainMenuComponent, TopSectionComponent, ContactSectionComponent, FooterComponent]
+  directives: [MainMenuComponent, TopSectionComponent, ServicesSectionComponent, AboutSectionComponent, ContactSectionComponent, FooterComponent]
 })
 export class WebsiteAppComponent {
   title = 'Website works!';

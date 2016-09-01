@@ -11,13 +11,13 @@ export var SECTIONS: Section[] = [
     id: 'services',
     label: 'Services',
     menuIcon: 'fa-cubes',
-    active: false
+    active: true
   },
   {
-    id: 'staff',
+    id: 'about',
     label: 'Who We Are',
     menuIcon: 'fa-group',
-    active: false
+    active: true
   },
   {
     id: 'contact',

@@ -1,6 +1,6 @@
 // Media Query
-.media-query(@maxWidth; @rules) {
-    @media only screen and (max-width: @maxWidth) {
-        @rules();
-    }
+.media-query(@minWidth; @rules) {
+  @media only screen and (min-width: @minWidth) {
+    @rules();
+  }
 }

@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 body {
   overflow: auto;
@@ -8,7 +9,11 @@ body {
 }
 
 .container {
-  padding: @spacing-unit;
+  padding: @spacing-unit / 2;
+
+  .media-query(@tablet, {
+    padding: @spacing-unit;
+  });
 }
 
 .section-heading {

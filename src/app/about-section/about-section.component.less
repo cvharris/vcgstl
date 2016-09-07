@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 :host {
   display: block;
@@ -21,13 +22,24 @@
 
 .profile-pic {
   object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .profile-name {
   text-align: center;
   line-height: 1.2rem;
+
+  .media-query(@tablet, {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  });
 }
 
 .profile-title {
   text-align: center;
+
+  .media-query(@tablet, {
+    font-size: 1.2rem;
+  });
 }

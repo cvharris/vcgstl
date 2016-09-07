@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 :host {
   display: block;
@@ -7,6 +8,11 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  .media-query(@tablet, {
+    height: 80vh;
+    min-height: 500px;
+  });
 }
 
 #top-section-container {
@@ -16,11 +22,27 @@
   height: 100%;
 }
 
+.vertically-centered {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .site-slogan {
   font-size: 1.9rem;
   text-transform: capitalize;
   margin-bottom: 8rem;
   margin-top: 4rem;
+
+  .media-query(@tablet, {
+    font-size: 5rem;
+    margin-bottom: 6rem;
+    line-height: 6rem;
+    margin-top: 2rem;
+    text-align: left;
+  });
 }
 
 .action-button {

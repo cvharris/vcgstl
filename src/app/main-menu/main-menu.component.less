@@ -34,6 +34,7 @@
   display: block;
   position: relative;
   color: @black;
+  cursor: pointer;
   padding: 1em;
   font-size: 1.25em;
   transition: color 0.3s;
@@ -53,12 +54,12 @@
   }
 
   &:before {
-    border: 2px solid @blue-darker;
+    border: 2px solid @blue-primary;
     opacity: 0;
-    background: @blue-dark;
+    background: @blue-primary;
     transform: scale3d(1.2, 1.2, 1);
     border-width: 1px;
-    border-color: @blue-dark;
+    border-color: @blue-primary;
   }
 
   &:after {

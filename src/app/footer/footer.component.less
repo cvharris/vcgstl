@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 :host {
   display: block;
@@ -12,6 +13,10 @@
   text-align: center;
   padding-top: @spacing-unit;
   border-top: 1px solid @grey-light;
+
+  .media-query(@tablet, {
+    text-align: left;
+  });
 }
 
 .social-icon {
@@ -32,4 +37,8 @@
   justify-content: space-around;
   padding-bottom: @spacing-unit;
   padding-top: @spacing-unit;
+
+  .media-query(@tablet, {
+    justify-content: flex-end;
+  });
 }

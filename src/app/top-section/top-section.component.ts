@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   moduleId: module.id,
   selector: 'top-section',
   templateUrl: 'top-section.component.html',
-  styleUrls: ['top-section.component.css']
+  styleUrls: ['top-section.component.less']
 })
 export class TopSectionComponent implements OnInit {
 

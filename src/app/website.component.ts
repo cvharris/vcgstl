@@ -13,7 +13,7 @@ import { FooterComponent } from './footer';
   },
   selector: 'website-app',
   templateUrl: 'website.component.html',
-  styleUrls: ['website.component.css'],
+  styleUrls: ['website.component.less'],
   encapsulation: ViewEncapsulation.None,
   directives: [MainMenuComponent, TopSectionComponent, ServicesSectionComponent, AboutSectionComponent, ContactSectionComponent, FooterComponent]
 })

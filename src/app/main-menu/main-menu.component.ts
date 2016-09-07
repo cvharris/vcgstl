@@ -7,7 +7,7 @@ import { ActiveSectionPipe } from './active-section.pipe';
   moduleId: module.id,
   selector: 'app-main-menu',
   templateUrl: 'main-menu.component.html',
-  styleUrls: ['main-menu.component.css'],
+  styleUrls: ['main-menu.component.less'],
   providers: [SectionsService],
   pipes: [ActiveSectionPipe]
 })

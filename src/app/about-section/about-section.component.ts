@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   moduleId: module.id,
   selector: 'about-section',
   templateUrl: 'about-section.component.html',
-  styleUrls: ['about-section.component.css']
+  styleUrls: ['about-section.component.less']
 })
 export class AboutSectionComponent implements OnInit {
 

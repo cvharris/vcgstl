@@ -1,0 +1,41 @@
+footer#site-footer {
+  display: block;
+  background-color: @grey-dark;
+  width: 100%;
+  min-height: 200px;
+  color: @white;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: @spacing-unit;
+  border-top: 1px solid @grey-light;
+
+  @media (min-width: @tablet) {
+    text-align: left;
+  };
+}
+
+.social-icon {
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  margin: .5rem;
+  background-color: @grey-light;
+  text-align: center;
+  line-height: 3rem;
+  color: @grey-dark;
+  font-size: 2rem;
+}
+
+.social-icons-container {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: @spacing-unit;
+  padding-top: @spacing-unit;
+
+  @media (min-width: @tablet) {
+    justify-content: flex-end;
+  };
+}

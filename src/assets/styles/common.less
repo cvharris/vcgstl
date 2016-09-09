@@ -23,11 +23,11 @@
     transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
   }
 
-  @media (max-width: @mobile) {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-  };
+  // @media (max-width: @mobile) {
+  //   overflow-x: hidden;
+  //   overflow-y: scroll;
+  //   -webkit-overflow-scrolling: touch;
+  // };
 }
 
 .title-bar {
@@ -85,8 +85,18 @@
   transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
 }
 
-#site.menuOpen {
-  overflow: hidden;
+body.menuOpen {
+  #site {
+    overflow: hidden;
+
+    &:after {
+      opacity: 1;
+      transform: translate3d(-300px, 0, 0);
+      transition-duration: 0.5s;
+      transition-property: opacity, transform;
+      transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    }
+  }
 
   header {
     transform: translate3d(0, 0, 0);
@@ -97,12 +107,16 @@
     transform: translate3d(-300px, 0, 0);
   }
 
-  &:after {
-    opacity: 1;
-    transform: translate3d(-300px, 0, 0);
-    transition-duration: 0.5s;
-    transition-property: opacity, transform;
-    transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  #main-menu {
+    visibility: visible;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+     -moz-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+       -o-transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+          transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 

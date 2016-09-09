@@ -21,6 +21,7 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 const nunjucks = require('gulp-nunjucks-render');
 const data = require('gulp-data');
+const fs = require('fs');
 
 const processors = [
   normalize,
@@ -34,6 +35,9 @@ const cleanCssOpts = {
 // HTML Templating and data injection
 gulp.task('nunjucks', () => {
   return gulp.src(`${source}*.+(html|njk)`)
+    .pipe(data(() => {
+      return JSON.parse(fs.readFileSync(`${source}data/data.json`))
+    }))
     .pipe(nunjucks({
       path: [`${source}templates`]
     }))

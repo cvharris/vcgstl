@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/ng-cli
 
 # dependencies
 /node_modules

@@ -1,0 +1,9 @@
+<!-- nav.njk -->
+<nav id="main-menu" class="right">
+  <div class="menu-section" *ngFor="let section of sections">
+    <a class="section-link">
+      <i class="fa {{section.menuIcon}}"></i>
+      {{section.label}}
+    </a>
+  </div>
+</nav>
